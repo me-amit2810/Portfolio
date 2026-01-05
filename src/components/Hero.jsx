@@ -95,7 +95,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                src={resume}
+                href={resume}
                 download
                 className="btn-secondary"
                 whileHover={{ scale: 1.05 }}
