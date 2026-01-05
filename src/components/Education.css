@@ -105,6 +105,31 @@
   line-height: 1.65;
 }
 
-/* 📱 MOBILE VIEW */
+/* 📱 MOBILE VIEW – ICON CENTERED ON LINE */
+@media (max-width: 768px) {
+  /* move timeline line to left */
+  .education-tree::before {
+    left: 32px;
+  }
+
+  /* make items full width */
+  .education-item,
+  .education-item.left,
+  .education-item.right {
+    width: 100%;
+    left: 0;
+    padding-left: 90px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  /* 🔥 icon exactly on the center of line */
+  .education-icon {
+    left: 32px;              /* same as line */
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
 
 
