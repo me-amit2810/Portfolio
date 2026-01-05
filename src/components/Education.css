@@ -1,6 +1,10 @@
 .education {
   background: #0f172a;
   padding: 100px 0;
+<<<<<<< HEAD
+=======
+  overflow-x: hidden; /* 🔥 SIDE SPACE FIX */
+>>>>>>> 995d0f1 (done)
 }
 
 .education-header {
@@ -8,7 +12,7 @@
   margin-bottom: 80px;
 }
 
-/* TREE CONTAINER */
+/* TREE */
 .education-tree {
   position: relative;
   max-width: 1000px;
@@ -19,9 +23,12 @@
 .education-tree::before {
   content: "";
   position: absolute;
-  left: 50%;
   top: 0;
   bottom: 0;
+<<<<<<< HEAD
+=======
+  left: 50%;
+>>>>>>> 995d0f1 (done)
   width: 3px;
   background: linear-gradient(180deg, #667eea, #764ba2);
   transform: translateX(-50%);
@@ -31,8 +38,14 @@
 .education-item {
   position: relative;
   width: 50%;
+<<<<<<< HEAD
   padding: 20px 50px;
   margin-bottom: 70px;
+=======
+  padding: 20px 40px; /* 🔥 reduced padding */
+  margin-bottom: 70px;
+  box-sizing: border-box;
+>>>>>>> 995d0f1 (done)
 }
 
 /* LEFT */
@@ -47,10 +60,19 @@
   text-align: left;
 }
 
+<<<<<<< HEAD
 /* ICON (DESKTOP – ON CENTER LINE) */
 .education-icon {
   position: absolute;
   top: 32px;
+=======
+/* ICON — DESKTOP */
+.education-icon {
+  position: absolute;
+  top: 32px;
+  left: 100%;
+  transform: translateX(-50%);
+>>>>>>> 995d0f1 (done)
   width: 56px;
   height: 56px;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -103,6 +125,7 @@
   line-height: 1.65;
 }
 
+<<<<<<< HEAD
 /* 📱 MOBILE – ICON ALWAYS CENTERED ON LINE */
 @media (max-width: 768px) {
   /* move line to fixed position */
@@ -112,11 +135,23 @@
   }
 
   /* items full width */
+=======
+/* 📱 MOBILE — BULLETPROOF FIX */
+@media (max-width: 768px) {
+  /* FIX LINE POSITION */
+  .education-tree::before {
+    left: 28px;
+    transform: none;
+  }
+
+  /* FULL WIDTH ITEMS */
+>>>>>>> 995d0f1 (done)
   .education-item,
   .education-item.left,
   .education-item.right {
     width: 100%;
     left: 0;
+<<<<<<< HEAD
     padding-left: 90px;
     padding-right: 20px;
     text-align: left;
@@ -125,6 +160,29 @@
   /* ICON LOCKED TO LINE */
   .education-icon {
     left: 32px;              /* EXACT same as line */
+=======
+    padding: 0 16px 0 72px; /* 🔥 balanced padding */
+    text-align: left;
+  }
+
+  /* 🔥 ICON LOCKED TO TREE, SAME FOR ALL */
+  .education-icon {
+    position: absolute;
+    left: 28px;               /* SAME AS LINE */
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+  /* line stays fixed */
+  .education-tree::before {
+    left: 28px;
+  }
+
+  /* 🔥 FORCE ALL ICONS TO CENTER OF LINE */
+  .education-icon {
+    left: 28px !important;
+    right: auto !important;
+>>>>>>> 995d0f1 (done)
     transform: translateX(-50%);
   }
 }
