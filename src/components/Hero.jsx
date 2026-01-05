@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaDownload, FaEye, FaCode, FaRocket } from "react-icons/fa";
 import "./Hero.css";
 import profile from "../assets/profile.png"
+import resume from "../assets/amit-resume.pdf"
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -94,7 +95,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="/resume.pdf"
+                src={resume}
                 download
                 className="btn-secondary"
                 whileHover={{ scale: 1.05 }}
