@@ -1,6 +1,6 @@
 .education {
   background: #0f172a;
-  padding: 100px 0; /* 🔥 proper breathing space */
+  padding: 100px 0;
 }
 
 .education-header {
@@ -13,16 +13,15 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 20px;
 }
 
-/* CENTER LINE */
+/* CENTER LINE (DESKTOP) */
 .education-tree::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
-  bottom: 0; /* 🔥 better than height: 100% */
+  bottom: 0;
   width: 3px;
   background: linear-gradient(180deg, #667eea, #764ba2);
   transform: translateX(-50%);
@@ -36,23 +35,22 @@
   margin-bottom: 70px;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .education-item.left {
   left: 0;
   text-align: right;
 }
 
-/* RIGHT SIDE */
+/* RIGHT */
 .education-item.right {
   left: 50%;
   text-align: left;
 }
 
-/* ICON ON LINE */
+/* ICON (DESKTOP – ON CENTER LINE) */
 .education-icon {
   position: absolute;
   top: 32px;
-  right: -30px; /* 🔥 perfectly centered on line */
   width: 56px;
   height: 56px;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -63,12 +61,13 @@
   justify-content: center;
   font-size: 22px;
   z-index: 2;
+  left: 100%;
+  transform: translateX(-50%);
 }
 
-/* RIGHT SIDE ICON */
 .education-item.right .education-icon {
-  left: -30px;
-  right: auto;
+  left: 0;
+  transform: translateX(-50%);
 }
 
 /* CARD */
@@ -79,7 +78,6 @@
   border-radius: 18px;
 }
 
-/* TEXT */
 .education-content h3 {
   color: #ffffff;
   font-size: 20px;
@@ -105,14 +103,15 @@
   line-height: 1.65;
 }
 
-/* 📱 MOBILE VIEW – ICON CENTERED ON LINE */
+/* 📱 MOBILE – ICON ALWAYS CENTERED ON LINE */
 @media (max-width: 768px) {
-  /* move timeline line to left */
+  /* move line to fixed position */
   .education-tree::before {
     left: 32px;
+    transform: none;
   }
 
-  /* make items full width */
+  /* items full width */
   .education-item,
   .education-item.left,
   .education-item.right {
@@ -123,13 +122,9 @@
     text-align: left;
   }
 
-  /* 🔥 icon exactly on the center of line */
+  /* ICON LOCKED TO LINE */
   .education-icon {
-    left: 32px;              /* same as line */
-    right: auto;
+    left: 32px;              /* EXACT same as line */
     transform: translateX(-50%);
   }
 }
-
-
-
