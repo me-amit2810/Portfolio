@@ -126,3 +126,26 @@
     right: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .education-tree::before {
+    left: 28px;
+  }
+
+  .education-item,
+  .education-item.left,
+  .education-item.right {
+    width: 100%;
+    left: 0;
+    padding-left: 80px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .education-icon {
+    left: 28px;              /* 👈 icon exactly on line */
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
